@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Legal</title>
+    <!-- Agrega los estilos de Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-200">
+    <nav class="bg-gray-600 text-white p-4">
+        <ul class="flex space-x-4 justify-center">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Consulta</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-semibold mb-4 py-8">Consulta</h1>
+        <form class="space-y-6">
+            <div>
+                <label for="nombre" class="block font-medium">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" class="w-full border rounded p-2">
+            </div>
+            <div>
+                <label for="Pais" class="block font-medium">Pais:</label>
+                <input type="text" id="pais" name="pais" class="w-full border rounded p-2">
+            </div>
+            <div>
+                <label for="Telefono" class="block font-medium">Telefono:</label>
+                <input type="number" id="Telefono" name="Telefono" class="w-full border rounded p-2">
+            </div>
+            <div>
+                <label for="email" class="block font-medium">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" class="w-full border rounded p-2">
+            </div>
+            <div>
+                <label for="mensaje" class="block font-medium">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" class="w-full border rounded p-2"></textarea>
+            </div>
+            
+            
+            <button type="submit" class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-600">Enviar</button>
+            <script>
+                document.querySelector('form').addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    alert('Consulta enviada correctamente');
+                });
+            </script>
+        </form>
+    </div>
+    <footer class="bg-gray-600 text-white p-4 absolute bottom-0 w-full">
+        <p class="text-center">&copy; 2024 Estudio Jurídico</p>
+    </footer>
+</body>
+</html>
